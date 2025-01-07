@@ -175,6 +175,7 @@ const Header = () => {
           <a
             href="https://www.linkedin.com/in/jasmine-gu-b2aa65201/"
             className="header-button"
+            target="_blank" rel="noopener noreferrer"
           >
             Let's stay in contact!
           </a>
