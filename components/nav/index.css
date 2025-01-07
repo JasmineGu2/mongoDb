@@ -13,6 +13,7 @@
     left: 0;
     z-index: 1000;
     transition: all 0.3s ease-in-out;
+    gap: var(--spacing-small);
   }
   
   .nav-container:hover {
@@ -21,11 +22,11 @@
   }
   
   .nav-item {
+    font-family: var(--font-primary);
     font-size: var(--font-size-body2);
     font-weight: var(--font-weight-medium);
     color: var(--text-dark);
     text-decoration: none;
-    margin: 0 var(--spacing-small);
     cursor: pointer;
     transition: color 0.3s ease;
   }

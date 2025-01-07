@@ -141,6 +141,7 @@ body {
 }
 
 .card-description {
+  font-family: var(--font-primary);
   font-size: 1rem;
   color: var(--background-primary);
   display: flex;
@@ -152,6 +153,7 @@ body {
 }
 
 .card-text {
+  font-family: var(--font-primary);
   color: var(--background-primary);
   margin: 0px;
   margin-bottom: 20px;

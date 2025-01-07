@@ -4,5 +4,6 @@
     align-items: center;
     color: white;
     gap: var(--spacing-small);
+    font-family: var(--font-primary);
   }
   
