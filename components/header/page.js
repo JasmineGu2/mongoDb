@@ -14,7 +14,7 @@ const Header = () => {
           Hearing your <span className="accent-green">journey is inspiring</span>,
           especially seeing how the team has grown from just{" "}
           <span className="accent-green">
-            you to 3 people to its current size!
+          you to a team of 3 and then to its current size
           </span>{" "}
           Would love to meet some of the brilliant minds at Mongo that you mentioned
           you <span className="accent-green">love being around :)</span>
@@ -35,7 +35,7 @@ const Header = () => {
       terrence: (
         <>
           Hi <span className="accent-green">Terrence</span>! <br /> <br /> Thanks
-          for being so <span className="accent-green">smiley</span> while I coded. I
+          for being so <span className="accent-green">positive</span> while I coded. I
           really enjoyed hearing about the{" "}
           <span className="accent-green">
             differences between working on product vs. DS teams
@@ -65,7 +65,7 @@ const Header = () => {
           Hi <span className="accent-green">Brian</span>,<br/> <br/>
           <span className="accent-green">Thank you</span> for coordinating my
           schedule with the teams during the busy holiday season. Wishing you a
-          <span className="accent-green"> Happy New Year! </span>
+          <span className="accent-green">  Happy New Year! </span>
         </>
       ),
       default: (
