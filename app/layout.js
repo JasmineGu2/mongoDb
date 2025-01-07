@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Thank you MongoDb",
+  title: "Thank you MongoDb - From Jasmine",
   description: "Personalized Thank You App",
 };
 
