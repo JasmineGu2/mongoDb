@@ -1,21 +1,455 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* Define Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  --background-primary: #011e2b; /* Dark navy */
+  --background-secondary: #00684a; /* Slightly lighter navy */
+  --text-primary: #ffffff; /* White */
+  --text-secondary: #5c6c74; /* Light gray */
+  --text-dark: #011e2b;
+  --highlight-green: #05e963; /* MongoDB green */
+  --highlight-yellow: #ffe213;
+  --background-green: #045d45;
+  --background-light: #e3fcf7;
+  --button-bg: #4a4a8a; /* Dark purple */
+  --button-text: #ffffff; /* White */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 64px;
+}
+/* Define Font Variables */
+:root {
+  --font-primary: 'Euclid Circular A', sans-serif; /* Default font family */
+  --font-secondary: 'Value Serif', serif; /* Serif font family */
+  
+  /* Font Sizes */
+  --font-size-h1: 48px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-subtitle: 18px;
+  --font-size-body2: 16px;
+  --font-size-body1: 13px;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Letter Spacing */
+  --letter-spacing-default: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Typography Styles */
+h1 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-h1);
+  letter-spacing: var(--letter-spacing-default);
+  text-transform: capitalize;
+}
+
+h2 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-h2);
+  letter-spacing: var(--letter-spacing-default);
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h3);
+  letter-spacing: var(--letter-spacing-default);
+  text-transform: capitalize;
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-subtitle);
+  letter-spacing: var(--letter-spacing-default);
+  text-transform: capitalize;
+}
+
+.body2-semibold {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-body2);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+.body2-regular {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body2);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+.body1-semibold {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-body1);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+.body1-regular {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body1);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.header {
+  position: relative; /* Ensure elements can layer properly */
+  min-height: 90vh;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-large);
+  background-color: var(--background-secondary);
+  padding: var(--spacing-large);
+  overflow: hidden;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  gap: 32px;
+  height: fit-content
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+    gap: 16px; /* Adjust spacing between items */
+    width: 100%; /* Ensure the container spans the available width */
+    max-width: 90%; /* Add padding on smaller screens */
+    text-align: center; /* Optional: Center text for stacked layout */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.header img {
+  max-width: 450px;
+  height: 300px;
+  border-radius: 16px;
+  z-index: 1;
 }
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+}
+
+.header-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-align: center; /* Center-align the text */
+  display: block;
+  line-height: 1.5; /* Adjust line spacing */
+}
+
+
+.header-subtitle {
+  font-size: var(--font-size-subtitle);
+  width: 70%;
+
+}
+
+.header-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--highlight-green);
+  color: var(--background-primary);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  border-color: var(--background-primary);
+}
+
+.styled-select {
+  vertical-align: middle;
+  border-color: var(--background-primary);
+  margin: 0 12px; /* Add spacing around the dropdown */
+  padding: 12px 24px; /* Padding for consistent look */
+  background-color: var(--highlight-green); /* Match button background */
+  color: var(--background-primary); /* Match text color */
+  box-shadow: none;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Match font size */
+  outline: none; /* Remove focus outline */
+  cursor: pointer; /* Pointer cursor */
+  -webkit-appearance: none; /* Remove default dropdown styling */
+  -moz-appearance: none; /* Remove default dropdown styling */
+  appearance: none; /* Remove default dropdown styling */
+  background-image: url('/chevrondown.svg'); 
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the SVG on the right */
+  background-size: 20px; /* Adjust the size of the SVG */
+  padding-right: 40px; /* Add space for the icon */
+}
+
+.styled-select:focus {
+  box-shadow: 0 0 5px var(--highlight-green); /* Highlight dropdown on focus */
+}
+
+.styled-select:focus {
+  box-shadow: 0 0 5px var(--highlight-green); /* Highlight dropdown on focus */
+}
+
+.styled-select option {
+  background-color: var(--background-primary); /* Options background color */
+  color: var(--highlight-green); /* Options text color */
+}
+/* Blob Styles */
+.blob-left,
+.blob-right {
+  position: absolute;
+  width: 500px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  z-index: 0; /* Send blobs behind the content */
+  opacity: 0.7; /* Optional transparency */
+}
+
+.blob-left {
+  top: -200px; /* Keep the blob partially off-screen at the top */
+  left: -150px; /* Bring it closer to the center */
+}
+
+.blob-right {
+  top: -200px; /* Keep the blob partially off-screen at the top */
+  right: -150px; /* Bring it closer to the center */
+}
+
+.blob-image {
+  width: 150%; /* Make the SVG scale to its container */
+  height: 150%; /* Full height */
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  padding: var(--spacing-large) var(--spacing-large);
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+
+}
+
+.footer-grid{
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+  gap: 32px; /* Space between boxes */
+  align-items: stretch; /* Stretch items to fill the grid cell */
+}
+
+
+.footer-box {
+  background-color: var(--background-light);
+  border-radius: 8px;
+  padding: var(--spacing-medium);
+  display: flex;
+  flex-direction: column; /* Arrange items horizontally */
+  align-items: flex-start; /* Vertically align items */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure boxes span the grid cell */
+  height: auto; /* Adjust height dynamically based on content */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 16px; /* Reduce space between boxes */
+  }
+}
+
+/* Style for the icon or image */
+.icon {
+  height:60px;
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+/* Text container inside the footer-box */
+.footer-box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footer-box-title {
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.footer-box-description {
+  font-size: 1rem;
+  color: var(--background-primary);
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px;
+  padding: 20px;
+  gap:0.3rem;
+}
+.header-box-description {
+  font-size: 1rem;
+  color: var(--background-primary);
+  margin: 0px;
+  padding: 20px;
+  text-align: left;
+}
+
+.footer-end{
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center align content horizontally */
+  align-items: center;
+  color: var(--color-dark-gray); /* Use light-grey variable for text color */
+  margin: 20px;
+  gap: 0.5rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around; /* Space between items */
+  align-items: center; /* Vertically center items */
+  background-color: var(--background-light); /* Background color */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px 10px; /* Spacing inside the container */
+  margin: 20px; /* Optional: Center container in the parent */
+  width: fit-content; /* Adjust to fit content width */
+  position: fixed;
+  z-index: 1000;
+}
+
+
+.nav-item {
+  font-size: 16px; /* Text size */
+  font-weight: 500; /* Medium weight for text */
+  color: var(--text-dark); /* Light gray text color */
+  text-decoration: none; /* Remove underline for links */
+  margin: 0 10px; /* Space between items */
+  cursor: pointer; /* Pointer on hover */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.img {
+  width: 2rem; /* Ensures image doesn't exceed its container width */
+  height: 2rem; /* Maintains the aspect ratio */
+}
+
+.image-source {
+  font-size: 12px;
+  color: white; /* Default color for the text */
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic; /* Optional: Adds emphasis */
+}
+
+.image-source a {
+  color: white; /* Default color for the link */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.image-source a:hover {
+  color: var(--highlight-green); /* Change color to green on hover */
+}
+
+.header-image-container{
+  flex-direction: column;
+  justify-items: flex-start;
+  z-index: 1;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 28px;
+  align-items: center;
+  background-color: var(--background-primary);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal */
+.modal {
+  background: white;
+  width: 50%; /* Modal width */
+  border-radius: 16px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1010;
+  display: flex;
+  flex-direction: column;
+  padding:16px;
+  align-items: flex-start; /* Vertically align items */
+  text-align: left; /* Align text to the left */
+}
+
+/* Close Button */
+.question-button {
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-box-text{
+  color: var(--background-primary);
+  margin:0px;
+  margin-bottom: 20px;
+}
+
+.accent-green {
+  color: #08AE4DFF; /* A nice green shade */
+  font-weight: bold;
+  display: inline; /* Ensure it doesn't act like a block */
+  font-size: inherit;
+  margin: 0px;
+}
+
