@@ -75,7 +75,7 @@ const Landing = () => {
     default: (
       <>
         This is my <span className="accent-green">"Think Big, Go Far"</span>
-        approach to an email follow-up—React, HTML, CSS style. <br /> <br />{' '}
+        {' '}approach to an email follow-up—React, HTML, CSS style. <br /> <br />{' '}
         It’s my way of combining{' '}
         <span className="accent-green">
           creativity, learning, and appreciation
