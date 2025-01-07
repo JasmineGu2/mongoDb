@@ -1,0 +1,185 @@
+.landing {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xlarge);
+    background-color: var(--background-secondary);
+    padding: var(--spacing-xlarge);
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    gap: var(--spacing-large);
+    height: fit-content;
+  }
+  
+  @media (max-width: 768px) {
+    .landing-container {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-small);
+      width: 100%;
+      max-width: 90%;
+      text-align: center;
+    }
+  }
+  
+  .landing img {
+    max-width: 450px;
+    height: 300px;
+    border-radius: var(--spacing-medium);
+    z-index: 1;
+  }
+  
+  .landing-content {
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: var(--spacing-large);
+  }
+  
+  .landing-title {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    text-align: center;
+    line-height: 1.5;
+    margin: 0px;
+  }
+  
+  .landing-subtitle {
+    font-size: var(--font-size-subtitle);
+    width: 70%;
+  }
+  
+  .landing-button {
+    display: inline-block;
+    padding: var(--spacing-small) var(--spacing-medium);
+    background-color: var(--highlight-green);
+    color: var(--background-primary);
+    text-decoration: none;
+    border-radius: var(--spacing-small);
+    font-size: var(--font-size-body2);
+    border-color: var(--background-primary);
+  }
+  
+  .landing-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 var(--spacing-small) var(--spacing-medium) rgba(0, 0, 0, 0.1);
+  }
+  
+  .landing-image {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .landing-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .landing-box-description {
+    font-size: var(--font-size-body2);
+    color: var(--background-primary);
+    margin: 0;
+    padding: var(--spacing-medium);
+    text-align: left;
+    word-wrap: break-word; /* Ensure long words break to the next line */
+    overflow-wrap: break-word; 
+  }
+  
+  .styled-select {
+    vertical-align: middle;
+    border-color: var(--background-primary);
+    margin: 0 var(--spacing-small);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background-color: var(--highlight-green);
+    color: var(--background-primary);
+    border-radius: var(--spacing-small);
+    font-size: var(--font-size-body2);
+    outline: none;
+    cursor: pointer;
+    background-image: url('/chevrondown.svg');
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-small) center;
+    background-size: var(--spacing-small);
+    padding-right: calc(var(--spacing-medium) + var(--spacing-small));
+  }
+  
+  .styled-select:hover {
+    transform: scale(1.05);
+    box-shadow: 0 var(--spacing-small) var(--spacing-medium) rgba(0, 0, 0, 0.1);
+  }
+  
+  .styled-select option {
+    background-color: var(--background-primary);
+    color: var(--highlight-green);
+  }
+  
+  .blob-left,
+  .blob-right {
+    position: absolute;
+    width: var(--blob-width, 500px);
+    height: var(--blob-height, 200px);
+    z-index: 0;
+    opacity: 0.7;
+  }
+  
+  .blob-left {
+    top: calc(-1 * var(--blob-height));
+    left: calc(-0.3 * var(--blob-width));
+  }
+  
+  .blob-right {
+    top: calc(-1 * var(--blob-height));
+    right: calc(-0.3 * var(--blob-width));
+  }
+  
+  .blob-image {
+    width: 150%;
+    height: 150%;
+  }
+  
+  .landing-image-container {
+    flex-direction: column;
+    justify-items: flex-start;
+    z-index: 1;
+  }
+  
+  .img {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .img:hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+  
+  .image-source {
+    font-size: var(--font-size-body1);
+    color: var(--text-primary);
+    text-align: center;
+    margin-top: var(--spacing-small);
+    font-style: italic;
+  }
+  
+  .image-source a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .image-source a:hover {
+    color: var(--highlight-green);
+  }
+  

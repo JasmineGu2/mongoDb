@@ -1,6 +1,5 @@
 /* Define Variables */
 :root {
-
   --background-primary: #011e2b; /* Dark navy */
   --background-secondary: #00684a; /* Slightly lighter navy */
   --text-primary: #ffffff; /* White */
@@ -14,13 +13,14 @@
   --button-text: #ffffff; /* White */
   --spacing-small: 8px;
   --spacing-medium: 16px;
-  --spacing-large: 64px;
+  --spacing-large: 32px;
+  --spacing-xlarge: 64px;
 }
 /* Define Font Variables */
 :root {
   --font-primary: 'Euclid Circular A', sans-serif; /* Default font family */
   --font-secondary: 'Value Serif', serif; /* Serif font family */
-  
+
   /* Font Sizes */
   --font-size-h1: 48px;
   --font-size-h2: 32px;
@@ -107,176 +107,10 @@ body {
   color: var(--text-primary);
 }
 
-.header {
-  position: relative; /* Ensure elements can layer properly */
-  min-height: 90vh;
-  display: flex;
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-large);
-  background-color: var(--background-secondary);
-  padding: var(--spacing-large);
-  overflow: hidden;
-}
-
-.header-container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 70%;
-  gap: 32px;
-  height: fit-content
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column; /* Change to column layout */
-    align-items: center; /* Center items horizontally */
-    gap: 16px; /* Adjust spacing between items */
-    width: 100%; /* Ensure the container spans the available width */
-    max-width: 90%; /* Add padding on smaller screens */
-    text-align: center; /* Optional: Center text for stacked layout */
-  }
-}
-
-.header img {
-  max-width: 450px;
-  height: 300px;
-  border-radius: 16px;
-  z-index: 1;
-}
-
-.header-content {
-  position: relative;
-  z-index: 1;
-  flex-direction: column;
-  display: flex;
-  width: 100%;
-  align-items: center;
-
-}
-
-.header-title {
-  font-size: 48px;
-  font-weight: bold;
-  color: white;
-  text-align: center; /* Center-align the text */
-  display: block;
-  line-height: 1.5; /* Adjust line spacing */
-}
-
-
-.header-subtitle {
-  font-size: var(--font-size-subtitle);
-  width: 70%;
-
-}
-
-.header-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: var(--highlight-green);
-  color: var(--background-primary);
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 16px;
-  border-color: var(--background-primary);
-}
-
-.header-button:hover {
-  transform: scale(1.05); /* Slightly increase the size */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-}
-
-.styled-select {
-  vertical-align: middle;
-  border-color: var(--background-primary);
-  margin: 0 12px; /* Add spacing around the dropdown */
-  padding: 12px 24px; /* Padding for consistent look */
-  background-color: var(--highlight-green); /* Match button background */
-  color: var(--background-primary); /* Match text color */
-  box-shadow: none;
-  border-radius: 8px; /* Rounded corners */
-  font-size: 16px; /* Match font size */
-  outline: none; /* Remove focus outline */
-  cursor: pointer; /* Pointer cursor */
-  -webkit-appearance: none; /* Remove default dropdown styling */
-  -moz-appearance: none; /* Remove default dropdown styling */
-  appearance: none; /* Remove default dropdown styling */
-  background-image: url('/chevrondown.svg'); 
-  background-repeat: no-repeat;
-  background-position: right 10px center; /* Position the SVG on the right */
-  background-size: 20px; /* Adjust the size of the SVG */
-  padding-right: 40px; /* Add space for the icon */
-}
-
-.styled-select:hover {
-  transform: scale(1.05); /* Slightly increase the size */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
-}
-
-.styled-select:focus {
-  box-shadow: 0 0 5px var(--highlight-green); /* Highlight dropdown on focus */
-}
-
-.styled-select:focus {
-  box-shadow: 0 0 5px var(--highlight-green); /* Highlight dropdown on focus */
-}
-
-.styled-select option {
-  background-color: var(--background-primary); /* Options background color */
-  color: var(--highlight-green); /* Options text color */
-}
-/* Blob Styles */
-.blob-left,
-.blob-right {
-  position: absolute;
-  width: 500px; /* Set a fixed width */
-  height: 200px; /* Set a fixed height */
-  z-index: 0; /* Send blobs behind the content */
-  opacity: 0.7; /* Optional transparency */
-}
-
-.blob-left {
-  top: -200px; /* Keep the blob partially off-screen at the top */
-  left: -150px; /* Bring it closer to the center */
-}
-
-.blob-right {
-  top: -200px; /* Keep the blob partially off-screen at the top */
-  right: -150px; /* Bring it closer to the center */
-}
-
-.blob-image {
-  width: 150%; /* Make the SVG scale to its container */
-  height: 150%; /* Full height */
-}
-
-/* Footer Section */
-.footer {
-  background-color: var(--background-primary);
-  color: var(--text-primary);
-  padding: var(--spacing-large) var(--spacing-large);
-  display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center;
-
-}
-
-.footer-grid{
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
-  gap: 32px; /* Space between boxes */
-  align-items: stretch; /* Stretch items to fill the grid cell */
-}
-
-
-.footer-box {
+.card {
   background-color: var(--background-light);
   border-radius: 8px;
+  overflow: hidden;
   padding: var(--spacing-medium);
   display: flex;
   flex-direction: column; /* Arrange items horizontally */
@@ -288,203 +122,75 @@ body {
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
-.footer-box:hover {
+.card:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   transform: scale(1.05); /* Slightly increase the size */
 }
 
-
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
-    gap: 16px; /* Reduce space between boxes */
-  }
-}
-
-/* Style for the icon or image */
-.icon {
-  height:60px;
-  flex-shrink: 0; /* Prevent the icon from shrinking */
-}
-
-/* Text container inside the footer-box */
-.footer-box-content {
+/* Text container inside the card */
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
 }
 
-.footer-box-title {
+.card-title {
   margin: 0;
   color: var(--text-dark);
 }
 
-.footer-box-description {
+.card-description {
   font-size: 1rem;
   color: var(--background-primary);
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 0px;
   padding: 20px;
-  gap:0.3rem;
+  gap: 0.3rem;
 }
 
-.header-box-description {
-  font-size: 1rem;
+.card-text {
   color: var(--background-primary);
   margin: 0px;
-  padding: 20px;
-  text-align: left;
-}
-
-.footer-end{
-  display: flex; /* Flexbox for layout */
-  justify-content: center; /* Center align content horizontally */
-  align-items: center;
-  color: var(--color-dark-gray); /* Use light-grey variable for text color */
-  margin: 20px;
-  gap: 0.5rem;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-around; /* Space between items */
-  align-items: center; /* Vertically center items */
-  background-color: var(--background-light); /* Background color */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  padding: 10px 10px; /* Spacing inside the container */
-  margin: 20px; /* Optional: Center container in the parent */
-  width: fit-content; /* Adjust to fit content width */
-  position: fixed;
-  z-index: 1000;
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-}
-
-.nav-container:hover {
-  transform: scale(1.05); /* Slightly enlarge the container */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Add a more pronounced shadow */
-}
-
-.nav-item {
-  font-size: 16px; /* Text size */
-  font-weight: 500; /* Medium weight for text */
-  color: var(--text-dark); /* Light gray text color */
-  text-decoration: none; /* Remove underline for links */
-  margin: 0 10px; /* Space between items */
-  cursor: pointer; /* Pointer on hover */
-  transition: color 0.3s ease; /* Smooth color change on hover */
-}
-
-.img {
-  width: 2rem; /* Ensures image doesn't exceed its container width */
-  height: 2rem; /* Maintains the aspect ratio */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
-}
-
-.img:hover {
-  transform: scale(1.2) rotate(10deg); /* Slightly enlarge and rotate the image */
-}
-
-.image-source {
-  font-size: 12px;
-  color: white; /* Default color for the text */
-  text-align: center;
-  margin-top: 8px;
-  font-style: italic; /* Optional: Adds emphasis */
-}
-
-.image-source a {
-  color: white; /* Default color for the link */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.image-source a:hover {
-  color: var(--highlight-green); /* Change color to green on hover */
-}
-
-.header-image-container{
-  flex-direction: column;
-  justify-items: flex-start;
-  z-index: 1;
-}
-
-.modal-container {
-  display: flex;
-  justify-content: flex-end;
-  padding: 28px;
-  align-items: center;
-  background-color: var(--background-primary);
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* Modal */
-.modal {
-  background: white;
-  width: 50%; /* Modal width */
-  border-radius: 16px;
-  position: relative;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1010;
-  display: flex;
-  flex-direction: column;
-  padding:16px;
-  align-items: flex-start; /* Vertically align items */
-  text-align: left; /* Align text to the left */
-}
-
-/* Close Button */
-.question-button {
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.close-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.footer-box-text{
-  color: var(--background-primary);
-  margin:0px;
   margin-bottom: 20px;
 }
 
 .accent-green {
-  color: #08AE4DFF; /* A nice green shade */
+  color: #08ae4dff; /* A nice green shade */
   font-weight: bold;
   display: inline; /* Ensure it doesn't act like a block */
   font-size: inherit;
   margin: 0px;
 }
 
-.header-image {
-  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+.header-container {
+  display: flex;
+  transform: translateX(0);
+  max-width: 100%;
+  justify-content: space-between;
+  padding: var(--spacing-medium);
+  align-items: center;
+  background-color: var(--background-primary);
 }
 
-.header-image:hover {
-  transform: scale(1.05); /* Grow the image slightly */
+.modal-buttons-container {
+  display: flex;
+}
+
+.icon-interactive {
+  width: 2rem; /* Ensures image doesn't exceed its container width */
+  height: 2rem; /* Maintains the aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.icon-interactive:hover {
+  transform: scale(1.2) rotate(10deg); /* Slightly enlarge and rotate the image */
+}
+
+/* Style for the icon or image */
+.icon {
+  height: 60px;
+  flex-shrink: 0; /* Prevent the icon from shrinking */
 }

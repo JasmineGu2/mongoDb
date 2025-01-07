@@ -1,0 +1,23 @@
+.section {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  padding: var(--spacing-xlarge) var(--spacing-xlarge);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-large);
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+  }
+}
