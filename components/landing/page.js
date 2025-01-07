@@ -8,36 +8,34 @@ const Landing = () => {
   const messages = {
     brooke: (
       <>
-        Hi <span className="accent-green">Brooke</span>! <br /> <br /> I really
-        appreciate you <span className="accent-green">sharing your wins</span>—
+        Hi <span className="accent-green">Brooke!</span> <br /> <br /> Thank you for a great chat. I really
+        enjoyed  <span className="accent-green">hearing about your wins</span>—
         presenting on a large scale to design teams, mentorship at WIT, and
         exciting projects like building a code editor. <br /> <br />
-        Hearing your <span className="accent-green">journey is inspiring</span>,
+        Your <span className="accent-green">journey is quite inspiring</span>,
         especially seeing how the team has grown from just{' '}
         <span className="accent-green">
-          you to a team of 3 and then to its current size
+          you to a team of 3 and then to its current size. :) 
         </span>{' '}
-        Would love to meet some of the brilliant minds at Mongo that you
-        mentioned you <span className="accent-green">love being around :)</span>
       </>
     ),
     stephen: (
       <>
-        Hi <span className="accent-green">Stephen</span>! <br /> <br /> Even
+        Hi <span className="accent-green">Stephen!</span> <br /> <br /> Thank you for<span className="accent-green"> patiently sitting </span>
+        through my messy handwriting as I whiteboarded, especially early on a Monday morning PST.{' '}
+        <br /> <br /> Even
         though I was nervous and cut it close on time,{' '}
         <span className="accent-green">
           your support throughout the process
         </span>{' '}
-        helped me code a solution in the end! Thank you for patiently sitting
-        through my messy handwriting, especially early on a Monday morning PST.{' '}
-        <br /> <br /> I also{' '}
+        helped me code a solution in the end! I also{' '}
         <span className="accent-green">appreciate your great callouts</span>
         —like reminding me about that missing space!
       </>
     ),
     terrence: (
       <>
-        Hi <span className="accent-green">Terrence</span>! <br /> <br /> Thanks
+        Hi <span className="accent-green">Terrence!</span> <br /> <br /> Thanks
         for being so <span className="accent-green">positive</span> while I
         coded. I really enjoyed hearing about the{' '}
         <span className="accent-green">
@@ -48,12 +46,12 @@ const Landing = () => {
         <span className="accent-green">
           helped me feel confident during my next 2 calls.
         </span>{' '}
-        I do, in fact, know how to make modals
+        I hope this app is a reminder that I do, in fact, know how to make modals.
       </>
     ),
     melissa: (
       <>
-        Hi <span className="accent-green">Melissa</span>! <br /> <br /> I’ve
+        Hi <span className="accent-green">Melissa!</span><br /> <br /> I’ve
         never had a recruiter with such{' '}
         <span className="accent-green">amazing response times</span>—you
         answered{' '}
@@ -61,14 +59,14 @@ const Landing = () => {
         like sponsorship, so swiftly and even kept me informed about your
         travels. <br /> <br /> It was{' '}
         <span className="accent-green">really thoughtful of you</span> to ask me
-        how it went afterward.
+        how it went afterward. Thanks!
       </>
     ),
     brian: (
       <>
-        Hi <span className="accent-green">Brian</span>,<br /> <br />
+        Hi <span className="accent-green">Brian! </span><br /> <br />
         <span className="accent-green">Thank you</span> for coordinating my
-        schedule with the teams during the busy holiday season. Wishing you a
+        schedule with the team's during the busy holiday season. Wishing you a
         <span className="accent-green"> Happy New Year! </span>
       </>
     ),
