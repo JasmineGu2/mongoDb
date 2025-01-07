@@ -80,7 +80,7 @@ const Landing = () => {
         <span className="accent-green">
           creativity, learning, and appreciation
         </span>{' '}
-        for this opportunity. Every button showcases an interaction. :)
+        for this opportunity. :)
       </>
     ),
   };
@@ -148,7 +148,7 @@ const Landing = () => {
             className="landing-title"
             initial={{ opacity: 0, y: -20 }} // Start with text hidden and slightly above
             animate={{ opacity: 1, y: 0 }} // Fade in and slide into position
-            transition={{ duration: 0.8, ease: 'easeOut' }} // Adjust animation duration and easing
+            transition={{ duration: 3, ease: 'easeOut' }} // Adjust animation duration and easing
           >
             Thank You{' '}
             <select

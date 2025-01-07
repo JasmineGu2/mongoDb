@@ -101,6 +101,9 @@
   }
   
   .styled-select {
+    appearance: none; /* Disables default browser styles for select dropdowns */
+    -webkit-appearance: none; /* For Safari and iOS */
+    -moz-appearance: none;
     vertical-align: middle;
     border-color: var(--background-primary);
     margin: 0 var(--spacing-small);
@@ -140,14 +143,15 @@
   }
   
   .blob-left {
-    top: calc(-1 * var(--blob-height));
-    left: calc(-0.3 * var(--blob-width));
+    top: -200px;
+    left: -150px;
   }
   
   .blob-right {
-    top: calc(-1 * var(--blob-height));
-    right: calc(-0.3 * var(--blob-width));
+    top: -200px;
+    right: -150px;
   }
+  
   
   .blob-image {
     width: 150%;
@@ -173,7 +177,7 @@
   .image-source {
     font-size: var(--font-size-body1);
     color: var(--text-primary);
-    text-align: center;
+    text-align: left;
     margin-top: var(--spacing-small);
     font-style: italic;
     font-family: var(--font-primary);
