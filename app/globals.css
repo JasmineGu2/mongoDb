@@ -175,10 +175,6 @@ body {
   background-color: var(--background-primary);
 }
 
-.modal-buttons-container {
-  display: flex;
-}
-
 .icon-interactive {
   width: 2rem; /* Ensures image doesn't exceed its container width */
   height: 2rem; /* Maintains the aspect ratio */
@@ -193,4 +189,12 @@ body {
 .icon {
   height: 60px;
   flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+.modal-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--spacing-medium);
+  align-items: center;
+  background-color: var(--background-primary);
 }
