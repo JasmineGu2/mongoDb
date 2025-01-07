@@ -123,7 +123,7 @@ const Header = () => {
       {/* Header Content */}
       <div className="header-container">
         <div className="header-image-container">
-          <img src="./mongo.gif" alt="Profile Visual" className="gif-large" />
+          <img src="./mongo.gif" alt="Profile Visual" className="header-image" />
           <p className="image-source">
             Source:{" "}
             <a

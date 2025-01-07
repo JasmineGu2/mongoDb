@@ -185,6 +185,11 @@ body {
   border-color: var(--background-primary);
 }
 
+.header-button:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
 .styled-select {
   vertical-align: middle;
   border-color: var(--background-primary);
@@ -205,6 +210,11 @@ body {
   background-position: right 10px center; /* Position the SVG on the right */
   background-size: 20px; /* Adjust the size of the SVG */
   padding-right: 40px; /* Add space for the icon */
+}
+
+.styled-select:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
 }
 
 .styled-select:focus {
@@ -275,7 +285,14 @@ body {
   width: 100%; /* Ensure boxes span the grid cell */
   height: auto; /* Adjust height dynamically based on content */
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
+
+.footer-box:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transform: scale(1.05); /* Slightly increase the size */
+}
+
 
 @media (max-width: 768px) {
   .footer-grid {
@@ -313,6 +330,7 @@ body {
   padding: 20px;
   gap:0.3rem;
 }
+
 .header-box-description {
   font-size: 1rem;
   color: var(--background-primary);
@@ -342,8 +360,13 @@ body {
   width: fit-content; /* Adjust to fit content width */
   position: fixed;
   z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
+.nav-container:hover {
+  transform: scale(1.05); /* Slightly enlarge the container */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Add a more pronounced shadow */
+}
 
 .nav-item {
   font-size: 16px; /* Text size */
@@ -358,6 +381,11 @@ body {
 .img {
   width: 2rem; /* Ensures image doesn't exceed its container width */
   height: 2rem; /* Maintains the aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.img:hover {
+  transform: scale(1.2) rotate(10deg); /* Slightly enlarge and rotate the image */
 }
 
 .image-source {
@@ -453,3 +481,10 @@ body {
   margin: 0px;
 }
 
+.header-image {
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.header-image:hover {
+  transform: scale(1.05); /* Grow the image slightly */
+}
