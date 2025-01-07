@@ -16,7 +16,7 @@
   }
   
   .nav-container:hover {
-    transform: translateX(-50%) scale(1.05);
+    transform: scale(1.05);
     box-shadow: 0 var(--spacing-medium) var(--spacing-large) rgba(0, 0, 0, 0.15);
   }
   
